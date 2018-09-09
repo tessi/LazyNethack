@@ -21,6 +21,7 @@ WSTTY = function(argv) {
     this.ws = null;
     this.address = argv.argString;
     this.environment = argv.environment;
+    this.gameStaleAfterSeconds = 300;
 };
 
 WSTTY.prototype.sendString = function(s) {
@@ -57,7 +58,8 @@ WSTTY.prototype.connect = function(addr) {
 };
 
 WSTTY.prototype.staleGameCheck = function() {
-  if (this.lastMessageReceived && this.lastMessageReceived < new Date().valueOf() - 300000) {
+  staleGameTime = new Date().valueOf() - this.gameStaleAfterSeconds * 1000;
+  if (this.lastMessageReceived && this.lastMessageReceived < staleGameTime) {
     this.loadAnotherGame();
     setTimeout(this.staleGameCheck.bind(this), 10000);
   } else {
@@ -100,7 +102,7 @@ WSTTY.prototype.delayedCommandSend = function(commands) {
   const that = this;
   window.setTimeout(function() {
     that.sendString(command)
-    if (commands.length > 0) { that.delayedCommandSend(commands); } 
+    if (commands.length > 0) { that.delayedCommandSend(commands); }
   }, 2000);
 }
 
