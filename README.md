@@ -31,7 +31,7 @@ Apart from fixing the known and unknown problems - I'm sure you can teach me a t
 
 * **Alastair Tse** - His screen saver project [webviewscreensaver](https://github.com/liquidx/webviewscreensaver) helped me a lot with getting a web view to run.
 * **Mattias Jahnke** - His screen saver project [webviewscreensaver](https://github.com/mattiasjahnke/WordClock) was my go to source for a nice SWIFT setup for screensavers.
-* **alt.org/nethack** - A place where fellow nethack'ians play nethack online for the viewing pleasure of the world. They have their own [we page]() where people can watch the game. This page heavily inspired me and my approach to base this screensaver on a WebView component.
+* **alt.org/nethack** - A place where fellow nethack'ians play nethack online for the viewing pleasure of the world. They have their own [page]() where people can watch the game. This page heavily inspired me and my approach to base this screensaver on a WebView component.
 
 ## License
 
