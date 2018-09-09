@@ -24,15 +24,15 @@ Ok, I'll be honest. This is my first MacOS/Swift app and I just built it for my 
 
 ### Known problems
 
-* It needs internet to connect to alt.org (the place where nethack people play online). I things don't load, chances are you're firewall blocks requests.
-* I have no idea how the screen saver will act under any other circumstances (multi screen setup, screen sizes) than on my iMac - If you run in to any problems please report an `Issue` or submit a `Pull Request` to fix it
+* It needs internet to connect to alt.org (the place where nethack people play online). If things don't load, chances are you're firewall blocks requests.
+* I have no idea how the screen saver will act under any other circumstances (multi screen setup, screen sizes) than on my mac - If you run in to any problems please report an `Issue` or submit a `Pull Request` to fix it
 * There are other nethack server out there. It would be nice to configure the server you want to connect to.
 
 ## Contribute
 
 Feel free to contribute by adding issues or opening pull requests.
 
-Apart from fixing the known and unknown problems - I'm sure you can teach me a thing or two since this is a first in may ways (my first screensaver, my first swift app, my first thing built with XCode). I'm happy for any issues or pull requests in that regard.
+Apart from fixing the known and unknown problems - I'm sure you can teach me a thing or two since this is a first in many ways (my first screensaver, my first swift app, my first thing built with XCode). I'm happy for any issues or pull requests in that regard.
 
 ## Thanks
 
