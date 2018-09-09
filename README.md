@@ -6,7 +6,14 @@
 
 ### Option 1: Download
 
-Ok, I'll be honest. This is my first MacOS/Swift app and I just built it for my personal nethack viewing pleasure. However, I also compiled things and have a `.saver` file in the `build` directory. It is probably broken in many ways (I imagine code signing or something), but feel free to try it :)
+Ok, I'll be honest. This is my first MacOS/Swift app and I just built it for my personal nethack viewing pleasure. So things might be broken. However, I also compiled things and bundled them as a release.
+
+1. Download from https://github.com/tessi/LazyNethack/releases
+1. Unpack the LazyNethack-x.x.zip file.
+1. Double-click (Open) the LazyNethack.saver file and choose to install it.
+1. Open up System Preferences > Desktop and Screen Saver > Screen Saver
+1. Select "LazyNethack" (It'll be at the bottom of the Screen Savers list.)
+
 
 ### Option 2: Build it yourself
 
