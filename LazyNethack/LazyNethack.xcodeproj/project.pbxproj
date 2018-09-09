@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5267E1F021457E5E004D76E3 /* dvsm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EA21457E5E004D76E3 /* dvsm.ttf */; };
+		5267E1F121457E5E004D76E3 /* fonts.css in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EB21457E5E004D76E3 /* fonts.css */; };
+		5267E1F221457E5E004D76E3 /* hterm_all.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EC21457E5E004D76E3 /* hterm_all.js */; };
+		5267E1F321457E5E004D76E3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1ED21457E5E004D76E3 /* index.html */; };
+		5267E1F421457E5E004D76E3 /* webfont.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EE21457E5E004D76E3 /* webfont.js */; };
+		5267E1F521457E5E004D76E3 /* wstty.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EF21457E5E004D76E3 /* wstty.js */; };
+		5267E1F62145BBB2004D76E3 /* dvsm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EA21457E5E004D76E3 /* dvsm.ttf */; };
+		5267E1F72145BBB2004D76E3 /* fonts.css in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EB21457E5E004D76E3 /* fonts.css */; };
+		5267E1F82145BBB2004D76E3 /* hterm_all.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EC21457E5E004D76E3 /* hterm_all.js */; };
+		5267E1F92145BBB2004D76E3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1ED21457E5E004D76E3 /* index.html */; };
+		5267E1FA2145BBB2004D76E3 /* webfont.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EE21457E5E004D76E3 /* webfont.js */; };
+		5267E1FB2145BBB2004D76E3 /* wstty.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EF21457E5E004D76E3 /* wstty.js */; };
+		CD2AA5E620663A08009EDD49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA5E520663A08009EDD49 /* AppDelegate.swift */; };
+		CD2AA5E820663A08009EDD49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E720663A08009EDD49 /* Assets.xcassets */; };
+		CD2AA5EB20663A08009EDD49 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E920663A08009EDD49 /* MainMenu.xib */; };
+		CD2AA61520679824009EDD49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA61420679824009EDD49 /* Info.plist */; };
+		CD2AA6192067A33B009EDD49 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA6172067A33B009EDD49 /* PreferencesWindow.xib */; };
+		CD2AA61D2067A391009EDD49 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA61C2067A391009EDD49 /* PreferencesWindowController.swift */; };
+		CD2AA61E2067A391009EDD49 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA61C2067A391009EDD49 /* PreferencesWindowController.swift */; };
+		CD2AA6202067A749009EDD49 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA61F2067A749009EDD49 /* Preferences.swift */; };
+		CD2AA6212067A749009EDD49 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA61F2067A749009EDD49 /* Preferences.swift */; };
+		CD2AA6232067B616009EDD49 /* LazyNethackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA6222067B616009EDD49 /* LazyNethackView.swift */; };
+		CD2AA6242067B616009EDD49 /* LazyNethackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA6222067B616009EDD49 /* LazyNethackView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5267E1EA21457E5E004D76E3 /* dvsm.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dvsm.ttf; sourceTree = "<group>"; };
+		5267E1EB21457E5E004D76E3 /* fonts.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = fonts.css; sourceTree = "<group>"; };
+		5267E1EC21457E5E004D76E3 /* hterm_all.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hterm_all.js; sourceTree = "<group>"; };
+		5267E1ED21457E5E004D76E3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		5267E1EE21457E5E004D76E3 /* webfont.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = webfont.js; sourceTree = "<group>"; };
+		5267E1EF21457E5E004D76E3 /* wstty.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wstty.js; sourceTree = "<group>"; };
+		CD2AA5E220663A08009EDD49 /* LazyNethackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyNethackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2AA5E520663A08009EDD49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD2AA5E720663A08009EDD49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD2AA5EA20663A08009EDD49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CD2AA5EC20663A08009EDD49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD2AA5F820663A3D009EDD49 /* LazyNethack.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyNethack.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2AA61420679824009EDD49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD2AA6172067A33B009EDD49 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		CD2AA61C2067A391009EDD49 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		CD2AA61F2067A749009EDD49 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		CD2AA6222067B616009EDD49 /* LazyNethackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyNethackView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD2AA5DF20663A08009EDD49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD2AA5F420663A3D009EDD49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD2AA5D920663A08009EDD49 = {
+			isa = PBXGroup;
+			children = (
+				CD2AA5E420663A08009EDD49 /* App */,
+				CD2AA613206797E9009EDD49 /* Resources */,
+				CD2AA60E2067978E009EDD49 /* Source */,
+				CD2AA5E320663A08009EDD49 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		CD2AA5E320663A08009EDD49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AA5E220663A08009EDD49 /* LazyNethackApp.app */,
+				CD2AA5F820663A3D009EDD49 /* LazyNethack.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD2AA5E420663A08009EDD49 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AA5E520663A08009EDD49 /* AppDelegate.swift */,
+				CD2AA60D20679771009EDD49 /* Resources */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CD2AA60D20679771009EDD49 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5267E1EA21457E5E004D76E3 /* dvsm.ttf */,
+				5267E1EB21457E5E004D76E3 /* fonts.css */,
+				5267E1EC21457E5E004D76E3 /* hterm_all.js */,
+				5267E1ED21457E5E004D76E3 /* index.html */,
+				5267E1EE21457E5E004D76E3 /* webfont.js */,
+				5267E1EF21457E5E004D76E3 /* wstty.js */,
+				CD2AA5E720663A08009EDD49 /* Assets.xcassets */,
+				CD2AA5E920663A08009EDD49 /* MainMenu.xib */,
+				CD2AA5EC20663A08009EDD49 /* Info.plist */,
+				CD2AA6172067A33B009EDD49 /* PreferencesWindow.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CD2AA60E2067978E009EDD49 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AA61B2067A357009EDD49 /* Models */,
+				CD2AA61A2067A34D009EDD49 /* Controllers */,
+				CD2AA60F206797B0009EDD49 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		CD2AA60F206797B0009EDD49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AA6222067B616009EDD49 /* LazyNethackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD2AA613206797E9009EDD49 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AA61420679824009EDD49 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CD2AA61A2067A34D009EDD49 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AA61C2067A391009EDD49 /* PreferencesWindowController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD2AA61B2067A357009EDD49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD2AA61F2067A749009EDD49 /* Preferences.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CD2AA5F520663A3D009EDD49 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CD2AA5E120663A08009EDD49 /* LazyNethackApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD2AA5F020663A08009EDD49 /* Build configuration list for PBXNativeTarget "LazyNethackApp" */;
+			buildPhases = (
+				CD2AA5DE20663A08009EDD49 /* Sources */,
+				CD2AA5DF20663A08009EDD49 /* Frameworks */,
+				CD2AA5E020663A08009EDD49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyNethackApp;
+			productName = WordClock;
+			productReference = CD2AA5E220663A08009EDD49 /* LazyNethackApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD2AA5F720663A3D009EDD49 /* LazyNethack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD2AA5FF20663A3D009EDD49 /* Build configuration list for PBXNativeTarget "LazyNethack" */;
+			buildPhases = (
+				CD2AA5F320663A3D009EDD49 /* Sources */,
+				CD2AA5F420663A3D009EDD49 /* Frameworks */,
+				CD2AA5F520663A3D009EDD49 /* Headers */,
+				CD2AA5F620663A3D009EDD49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyNethack;
+			productName = WordClock;
+			productReference = CD2AA5F820663A3D009EDD49 /* LazyNethack.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD2AA5DA20663A08009EDD49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Tessi;
+				TargetAttributes = {
+					CD2AA5E120663A08009EDD49 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					CD2AA5F720663A3D009EDD49 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CD2AA5DD20663A08009EDD49 /* Build configuration list for PBXProject "LazyNethack" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD2AA5D920663A08009EDD49;
+			productRefGroup = CD2AA5E320663A08009EDD49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD2AA5E120663A08009EDD49 /* LazyNethackApp */,
+				CD2AA5F720663A3D009EDD49 /* LazyNethack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD2AA5E020663A08009EDD49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5267E1F321457E5E004D76E3 /* index.html in Resources */,
+				CD2AA5E820663A08009EDD49 /* Assets.xcassets in Resources */,
+				5267E1F421457E5E004D76E3 /* webfont.js in Resources */,
+				5267E1F121457E5E004D76E3 /* fonts.css in Resources */,
+				5267E1F521457E5E004D76E3 /* wstty.js in Resources */,
+				CD2AA5EB20663A08009EDD49 /* MainMenu.xib in Resources */,
+				5267E1F221457E5E004D76E3 /* hterm_all.js in Resources */,
+				5267E1F021457E5E004D76E3 /* dvsm.ttf in Resources */,
+				CD2AA61520679824009EDD49 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD2AA5F620663A3D009EDD49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5267E1F62145BBB2004D76E3 /* dvsm.ttf in Resources */,
+				5267E1F72145BBB2004D76E3 /* fonts.css in Resources */,
+				5267E1F82145BBB2004D76E3 /* hterm_all.js in Resources */,
+				5267E1F92145BBB2004D76E3 /* index.html in Resources */,
+				5267E1FA2145BBB2004D76E3 /* webfont.js in Resources */,
+				5267E1FB2145BBB2004D76E3 /* wstty.js in Resources */,
+				CD2AA6192067A33B009EDD49 /* PreferencesWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD2AA5DE20663A08009EDD49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2AA6232067B616009EDD49 /* LazyNethackView.swift in Sources */,
+				CD2AA5E620663A08009EDD49 /* AppDelegate.swift in Sources */,
+				CD2AA6202067A749009EDD49 /* Preferences.swift in Sources */,
+				CD2AA61D2067A391009EDD49 /* PreferencesWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD2AA5F320663A3D009EDD49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2AA6212067A749009EDD49 /* Preferences.swift in Sources */,
+				CD2AA61E2067A391009EDD49 /* PreferencesWindowController.swift in Sources */,
+				CD2AA6242067B616009EDD49 /* LazyNethackView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD2AA5E920663A08009EDD49 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD2AA5EA20663A08009EDD49 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD2AA5EE20663A08009EDD49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD2AA5EF20663A08009EDD49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		CD2AA5F120663A08009EDD49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				INFOPLIST_FILE = App/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CD2AA5F220663A08009EDD49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				INFOPLIST_FILE = App/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		CD2AA60020663A3D009EDD49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		CD2AA60120663A3D009EDD49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD2AA5DD20663A08009EDD49 /* Build configuration list for PBXProject "LazyNethack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD2AA5EE20663A08009EDD49 /* Debug */,
+				CD2AA5EF20663A08009EDD49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD2AA5F020663A08009EDD49 /* Build configuration list for PBXNativeTarget "LazyNethackApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD2AA5F120663A08009EDD49 /* Debug */,
+				CD2AA5F220663A08009EDD49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD2AA5FF20663A3D009EDD49 /* Build configuration list for PBXNativeTarget "LazyNethack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD2AA60020663A3D009EDD49 /* Debug */,
+				CD2AA60120663A3D009EDD49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD2AA5DA20663A08009EDD49 /* Project object */;
+}
