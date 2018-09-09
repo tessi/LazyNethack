@@ -17,7 +17,6 @@ Ok, I'll be honest. This is my first MacOS/Swift app and I just built it for my 
 
 ### Known problems
 
-* This saver connects to a random game on alt.org. If that game ends or is suspended, it keeps watching that game. pretty boring. Some kind of "stale game detection" would be nice so the saver could switch to a more interesting game.
 * It needs internet to connect to alt.org (the place where nethack people play online). I things don't load, chances are you're firewall blocks requests.
 * I have no idea how the screen saver will act under any other circumstances (multi screen setup, screen sizes) than on my iMac - If you run in to any problems please report an `Issue` or submit a `Pull Request` to fix it
 * There are other nethack server out there. It would be nice to configure the server you want to connect to.

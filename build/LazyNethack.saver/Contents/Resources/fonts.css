@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    src: local("DejaVu Sans Mono"),
+         local("DejaVuSansMono"),
+         url("dvsm.ttf");
+}

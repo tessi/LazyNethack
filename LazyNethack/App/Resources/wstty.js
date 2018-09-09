@@ -42,6 +42,7 @@ WSTTY.prototype.connect = function(addr) {
     this.ws.binaryType = "arraybuffer";
 
     this.ws.onmessage = function(msg) {
+        this.lastMessageReceived = new Date().valueOf();
         if (!msg || !msg.data)
             return;
         if (typeof msg.data === "string")
@@ -50,9 +51,31 @@ WSTTY.prototype.connect = function(addr) {
             String.fromCharCode.apply(
                 String, new Uint8Array(msg.data)));
     }.bind(this)
-    this.ws.onerror = this.statusMenu.bind(this, "Connection error.", false);
-    this.ws.onclose = this.statusMenu.bind(this, "Connection closed.", false);
+    this.ws.onerror = this.reloadPage.bind(this, false);
+    this.ws.onclose = this.reloadPage.bind(this, false);
+    setTimeout(this.staleGameCheck.bind(this), 10000);
 };
+
+WSTTY.prototype.staleGameCheck = function() {
+  if (this.lastMessageReceived && this.lastMessageReceived < new Date().valueOf() - 300000) {
+    this.loadAnotherGame();
+    setTimeout(this.staleGameCheck.bind(this), 10000);
+  } else {
+    setTimeout(this.staleGameCheck.bind(this), 1000);
+  }
+}
+
+WSTTY.prototype.loadAnotherGame = function() {
+  const commands = [
+    'q', // get out of the current game
+    'a', // join the next best game
+  ];
+  this.delayedCommandSend(commands);
+}
+
+WSTTY.prototype.reloadPage = function() {
+  window.location.reload(false);
+}
 
 WSTTY.prototype.statusMenu = function(status) {
   this.io.writeUTF16(`${status}\r\n`);
