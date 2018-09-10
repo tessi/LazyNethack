@@ -47,6 +47,7 @@ class LazyNethackView: ScreenSaverView,
   }
   
   deinit {
+    if isPreview { return }
     webView.frameLoadDelegate = nil
     webView.policyDelegate = nil
     webView.uiDelegate = nil
@@ -57,11 +58,10 @@ class LazyNethackView: ScreenSaverView,
   func setup() {
     autoresizingMask = [NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]
     autoresizesSubviews = true
-    startAnimation()
+    // startAnimation()
   }
   
   fileprivate func loadNethack() {
-//    let bundle = Bundle.main
     let bundle = Bundle.init(for: type(of: self))
     let url = bundle.path(forResource: "index", ofType: "html")
     NSLog("url: %@", url ?? "<nil>")
@@ -69,7 +69,7 @@ class LazyNethackView: ScreenSaverView,
   }
   
   override func startAnimation() {
-//    super.startAnimation()
+    super.startAnimation()
     if isPreview { return }
   
     webView = WebView(frame: self.bounds)
@@ -90,8 +90,8 @@ class LazyNethackView: ScreenSaverView,
   }
   
   override func stopAnimation() {
-    if isPreview { return }
     super.stopAnimation()
+    if isPreview { return }
     webView.removeFromSuperview()
     webView.close()
     webView = nil
