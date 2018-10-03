@@ -13402,6 +13402,7 @@ hterm.Terminal.prototype.runCommandClass = function(commandClass, argString) {
 
   this.installKeyboard();
   this.command.run();
+  return this.command;
 };
 
 /**
