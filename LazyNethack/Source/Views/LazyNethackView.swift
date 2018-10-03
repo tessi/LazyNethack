@@ -58,7 +58,7 @@ class LazyNethackView: ScreenSaverView,
   func setup() {
     autoresizingMask = [NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]
     autoresizesSubviews = true
-    // startAnimation()
+     startAnimation()
   }
   
   fileprivate func loadNethack() {
@@ -69,7 +69,7 @@ class LazyNethackView: ScreenSaverView,
   }
   
   override func startAnimation() {
-    super.startAnimation()
+//    super.startAnimation()
     if isPreview { return }
   
     webView = WebView(frame: self.bounds)
