@@ -8,6 +8,7 @@ const GameControl = {
              urls: ["fonts.css"]
            },
     url: "wss://alt.org/wstty-wss",
+    defaultTimeout: 2000,
   },
   lastGameUpdateReceivedAt: new Date(),
   tty: null,
@@ -22,42 +23,55 @@ GameControl.staleGameCheck = () => {
     GameControl.loadAnotherGame()
                .then(GameControl.staleGameCheck);
   } else {
-    setTimeout(GameControl.staleGameCheck, 5000);
+    window.setTimeout(GameControl.staleGameCheck, 5000);
   }
+};
+
+// in case weird question mark characters are show, we need to change
+// charset stripping (the 's' key when viewing a game)
+GameControl.charsetStrippingCheck = () => {
+  if (GameControl.weirdCharactersPresent()) {
+    GameControl.sendKeysToTerminal(['s'], 0)
+  }
+  window.setTimeout(GameControl.charsetStrippingCheck, GameControl.settings.defaultTimeout);
+};
+
+GameControl.screen = () => GameControl.term.screen_
+
+// when charset stripping is set wrong, we see �'s on the screen
+GameControl.weirdCharactersPresent = () => GameControl.screen()
+                                                      .rowsArray
+                                                      .map((r) => r.textContent).join("\n")
+                                                      .search("�") > 0;
+
+// coming from a game, we want to watch another
+// randomly selected game.
+GameControl.loadAnotherGame = () => {
+  return GameControl.sendKeysToTerminal(['q'], GameControl.settings.defaultTimeout)
+                    .then(GameControl.selectGame);
 }
 
-GameControl.loadAnotherGame = () => {
-  return new Promise((resolve, reject) => {
-    const keys = [
-      'q', // get out of the current game
-      'a', // join the next best game
-    ];
-    GameControl.sendKeysToTerminal(keys, 2000)
-               .then(resolve)
-               .catch(reject);
-  });
-}
+GameControl.selectGame = () => {
+  // assumes we are in the game menu sorted by "idle time"
+  // selects the first game in the list
+  return GameControl.sendKeysToTerminal(['a'], GameControl.settings.defaultTimeout)
+                    .then(() => {
+                     // for some reason safari scrolls down after load. We want to be scrolled-up instead.
+                      window.scrollTo(0, 0);
+                    });
+};
 
 GameControl.autoconnect = () => {
-  return new Promise((resolve, reject) => {
-    const keys = [
-      'c', // connect to alt.org
-      'w', // select "watch existing game"
-      ',', // change sorting until we
-      ',', // .. reach sorted by "idle time"
-      ',', // .. so that we get an active game
-      'a', // watch the first game in the list
-      'r'  // resize our terminal to the players size
-    ];
+  const keys = [
+    'c', // connect to alt.org
+    'w', // select "watch existing game"
+    ',', // change sorting until we
+    ',', // .. reach sorted by "idle time"
+    ','  // .. so that we get an active game
+  ];
 
-    GameControl.sendKeysToTerminal(keys, 1000)
-               .then(() => {
-                // for some reason safari scrolls down after load. We want to be scrolled-up instead.
-                 window.scrollTo(0, 0);
-                 resolve();
-               })
-               .catch((error) => reject(error));
-  });
+  return GameControl.sendKeysToTerminal(keys, GameControl.settings.defaultTimeout)
+                    .then(GameControl.selectGame);
 };
 
 GameControl.sendKeysToTerminal = (keys, time_between_key_presses) => {
@@ -67,8 +81,8 @@ GameControl.sendKeysToTerminal = (keys, time_between_key_presses) => {
       GameControl.tty.sendString(key);
       if (keys.length > 0) {
         GameControl.sendKeysToTerminal(keys, time_between_key_presses)
-                   .then(() => resolve())
-                   .catch((error) => reject(error));
+                   .then(resolve)
+                   .catch(reject);
       } else {
         resolve();
       }
@@ -88,7 +102,10 @@ window.onload = () => {
          wstty.onMessageReceived = () => GameControl.lastGameUpdateReceivedAt = new Date();
          return GameControl.autoconnect();
        })
-       .then(GameControl.staleGameCheck)
+       .then(() => {
+         GameControl.staleGameCheck();
+         GameControl.charsetStrippingCheck();
+       })
        .catch((error) => {
          console.log({error});
        });
