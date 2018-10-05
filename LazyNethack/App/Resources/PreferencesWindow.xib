@@ -17,24 +17,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXP-79-gTT">
-                        <rect key="frame" x="91" y="234" width="135" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="fU5-XR-yEO">
-                            <font key="font" metaFont="system"/>
-                            <segments>
-                                <segment label="Dynamic" width="70"/>
-                                <segment label="Static" selected="YES"/>
-                            </segments>
-                        </segmentedCell>
-                        <connections>
-                            <action selector="rowWidthChanged:" target="gQW-yC-Zpt" id="bJD-iO-S25"/>
-                        </connections>
-                    </segmentedControl>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGc-e6-3tB">
                         <rect key="frame" x="10" y="238" width="77" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Row width" id="Y5B-4h-BRK">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Font" id="Y5B-4h-BRK">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RhC-9P-poq">
+                        <rect key="frame" x="10" y="204" width="98" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Nethack Server" id="WtQ-8E-bAm">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -51,6 +46,44 @@
                             </connections>
                         </buttonCell>
                     </button>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9WP-mD-ES8">
+                        <rect key="frame" x="112" y="233" width="225" height="26"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="K9Z-ct-0he" id="Uha-wP-ibT">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="3p3-5J-srl">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="K9Z-ct-0he"/>
+                                    <menuItem title="Item 2" id="KsN-GE-YM6"/>
+                                    <menuItem title="Item 3" id="WIk-lc-Yfw"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zE-hG-jZk">
+                        <rect key="frame" x="114" y="204" width="220" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OKj-dq-Ndj">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXP-79-gTT">
+                        <rect key="frame" x="273" y="137" width="135" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="fU5-XR-yEO">
+                            <font key="font" metaFont="system"/>
+                            <segments>
+                                <segment label="Dynamic" width="70"/>
+                                <segment label="Static" selected="YES"/>
+                            </segments>
+                        </segmentedCell>
+                        <connections>
+                            <action selector="rowWidthChanged:" target="gQW-yC-Zpt" id="bJD-iO-S25"/>
+                        </connections>
+                    </segmentedControl>
                 </subviews>
             </view>
         </window>

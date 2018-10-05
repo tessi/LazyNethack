@@ -11,6 +11,8 @@ import Cocoa
 @objc(PreferencesWindowController)
 class PreferencesWindowController: NSWindowController {
     @IBOutlet weak var rowWidthSegment: NSSegmentedControl!
+    @IBOutlet weak var fontSegment: NSSegmentedControl!
+    @IBOutlet weak var serverURLSegment: NSSegmentedControl!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,4 +31,20 @@ class PreferencesWindowController: NSWindowController {
             Preferences.rowWidth = .`static`
         }
     }
+  
+  @IBAction func fontChanged(_ sender: Any) {
+    if rowWidthSegment.selectedSegment == 0 {
+      Preferences.font = .dynamic
+    } else {
+      Preferences.font = .`static`
+    }
+  }
+  
+  @IBAction func serverURLChanged(_ sender: Any) {
+    if serverURLSegment.selectedSegment == 0 {
+      Preferences.serverURL = .dynamic
+    } else {
+      Preferences.serverURL = .`static`
+    }
+  }
 }
