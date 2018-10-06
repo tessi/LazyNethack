@@ -17,8 +17,9 @@ class LazyNethackView: ScreenSaverView,
                        WebPolicyDelegate,
                        WebUIDelegate {
   
-  var webView: WebView!
+  var webView: WebView?
   var preferencesController: PreferencesWindowController?
+  var startedFromTestApp = false
     
   // MARK: - Preferences
   override var hasConfigureSheet: Bool {
@@ -30,70 +31,88 @@ class LazyNethackView: ScreenSaverView,
       return controller.window
     }
   
-    let controller = PreferencesWindowController(windowNibName: NSNib.Name(rawValue: "PreferencesWindow"))
+//    let controller = PreferencesWindowController(windowNibName: NSNib.Name(rawValue: "PreferencesWindow"))
+    let controller = PreferencesWindowController(windowNibName: NSNib.Name("PreferencesWindow"))
   
     preferencesController = controller
     return controller.window
   }
 
+  // entry point for when we are started within apples screensaber framework
   override init?(frame: NSRect, isPreview: Bool) {
     super.init(frame: frame, isPreview: isPreview)
     setup()
   }
   
+  // entry point for when we are started within our own test-app
   required init?(coder: NSCoder) {
     super.init(coder: coder)
+    startedFromTestApp = true
     setup()
   }
   
   deinit {
-    if isPreview { return }
-    webView.frameLoadDelegate = nil
-    webView.policyDelegate = nil
-    webView.uiDelegate = nil
-    webView.editingDelegate = nil
-    webView.close()
+    if let webView = webView {
+      webView.frameLoadDelegate = nil
+      webView.policyDelegate = nil
+      webView.uiDelegate = nil
+      webView.editingDelegate = nil
+      webView.close()
+    }
   }
     
   func setup() {
     autoresizingMask = [NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]
     autoresizesSubviews = true
-    // startAnimation()
+    if startedFromTestApp { startAnimation() }
   }
   
   fileprivate func loadNethack() {
     let bundle = Bundle.init(for: type(of: self))
-    let url = bundle.path(forResource: "index", ofType: "html")
-    NSLog("url: %@", url ?? "<nil>")
-    webView.mainFrameURL = url
+    let baseUrl = bundle.path(forResource: "index", ofType: "html")
+    if let webView = webView, let baseUrl = baseUrl {
+      var url = "file://" + baseUrl
+      if isPreview { url = url + "?preview=true" }
+      NSLog("nethack url: %@", url)
+      webView.mainFrameURL = url
+    }
+  }
+  
+  fileprivate func createWebView() {
+    webView = WebView(frame: self.bounds)
+    if let webView = webView {
+      webView.frameLoadDelegate = self
+      webView.shouldUpdateWhileOffscreen = true
+      webView.policyDelegate = self
+      webView.uiDelegate = self
+      webView.editingDelegate = self
+      webView.autoresizingMask = [NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]
+      webView.autoresizesSubviews = true
+      webView.drawsBackground = false
+    }
   }
   
   override func startAnimation() {
-    super.startAnimation()
-    if isPreview { return }
+    if !startedFromTestApp { super.startAnimation() }
   
-    webView = WebView(frame: self.bounds)
-    webView.frameLoadDelegate = self
-    webView.shouldUpdateWhileOffscreen = true
-    webView.policyDelegate = self
-    webView.uiDelegate = self
-    webView.editingDelegate = self
-    webView.autoresizingMask = [NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]
-    webView.autoresizesSubviews = true
-    webView.drawsBackground = false
-    addSubview(self.webView)
-    
-    let color = NSColor(calibratedWhite: 0.0, alpha: 1.0)
-    webView.layer?.backgroundColor = color.cgColor
-    
+    createWebView()
+    if let webView = webView {
+      addSubview(webView)
+      
+      let color = NSColor(calibratedWhite: 0.0, alpha: 1.0)
+      if let layer = webView.layer {
+        layer.backgroundColor = color.cgColor
+      }
+    }
     loadNethack()
   }
   
   override func stopAnimation() {
     super.stopAnimation()
-    if isPreview { return }
-    webView.removeFromSuperview()
-    webView.close()
+    if let webView = webView {
+      webView.removeFromSuperview()
+      webView.close()
+    }
     webView = nil
   }
   
@@ -128,9 +147,11 @@ class LazyNethackView: ScreenSaverView,
   }
 
   func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
-    webView.resignFirstResponder()
-    webView.mainFrame.frameView.allowsScrolling = false
-    //  webView.drawsBackground = true
+    if let webView = webView {
+      webView.resignFirstResponder()
+      webView.mainFrame.frameView.allowsScrolling = false
+      //  webView.drawsBackground = true
+    }
   }
 
   func webView(_ webView: WebView!, unableToImplementPolicyWithError error: Error!, frame: WebFrame!) {

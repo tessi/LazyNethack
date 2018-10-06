@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5267E1F021457E5E004D76E3 /* dvsm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EA21457E5E004D76E3 /* dvsm.ttf */; };
-		5267E1F121457E5E004D76E3 /* fonts.css in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EB21457E5E004D76E3 /* fonts.css */; };
-		5267E1F221457E5E004D76E3 /* hterm_all.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EC21457E5E004D76E3 /* hterm_all.js */; };
-		5267E1F321457E5E004D76E3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1ED21457E5E004D76E3 /* index.html */; };
-		5267E1F421457E5E004D76E3 /* webfont.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EE21457E5E004D76E3 /* webfont.js */; };
-		5267E1F521457E5E004D76E3 /* wstty.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EF21457E5E004D76E3 /* wstty.js */; };
-		5267E1F62145BBB2004D76E3 /* dvsm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EA21457E5E004D76E3 /* dvsm.ttf */; };
-		5267E1F72145BBB2004D76E3 /* fonts.css in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EB21457E5E004D76E3 /* fonts.css */; };
-		5267E1F82145BBB2004D76E3 /* hterm_all.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EC21457E5E004D76E3 /* hterm_all.js */; };
-		5267E1F92145BBB2004D76E3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1ED21457E5E004D76E3 /* index.html */; };
-		5267E1FA2145BBB2004D76E3 /* webfont.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EE21457E5E004D76E3 /* webfont.js */; };
-		5267E1FB2145BBB2004D76E3 /* wstty.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EF21457E5E004D76E3 /* wstty.js */; };
+		520E3C142169047500483F55 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E3C132169047500483F55 /* ScreenSaver.framework */; };
+		520E3C162169049000483F55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E3C152169049000483F55 /* Cocoa.framework */; };
+		520E3C1F216914A100483F55 /* thumbnail@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 520E3C1D216914A100483F55 /* thumbnail@2.png */; };
+		520E3C20216914A100483F55 /* thumbnail@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 520E3C1D216914A100483F55 /* thumbnail@2.png */; };
+		520E3C21216914A100483F55 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 520E3C1E216914A100483F55 /* thumbnail.png */; };
+		520E3C22216914A100483F55 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 520E3C1E216914A100483F55 /* thumbnail.png */; };
+		52C85CD82168F75000A1A102 /* gameControl.js in Resources */ = {isa = PBXBuildFile; fileRef = 52C85CD72168F75000A1A102 /* gameControl.js */; };
+		52C85CD92168F75000A1A102 /* gameControl.js in Resources */ = {isa = PBXBuildFile; fileRef = 52C85CD72168F75000A1A102 /* gameControl.js */; };
+		52C85CDA2168F84000A1A102 /* dvsm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EA21457E5E004D76E3 /* dvsm.ttf */; };
+		52C85CDB2168F84000A1A102 /* fonts.css in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EB21457E5E004D76E3 /* fonts.css */; };
+		52C85CDC2168F84000A1A102 /* hterm_all.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EC21457E5E004D76E3 /* hterm_all.js */; };
+		52C85CDD2168F84000A1A102 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1ED21457E5E004D76E3 /* index.html */; };
+		52C85CDE2168F84000A1A102 /* webfont.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EE21457E5E004D76E3 /* webfont.js */; };
+		52C85CDF2168F84000A1A102 /* wstty.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EF21457E5E004D76E3 /* wstty.js */; };
+		52C85CE02168F84E00A1A102 /* dvsm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EA21457E5E004D76E3 /* dvsm.ttf */; };
+		52C85CE12168F84E00A1A102 /* fonts.css in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EB21457E5E004D76E3 /* fonts.css */; };
+		52C85CE22168F84E00A1A102 /* hterm_all.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EC21457E5E004D76E3 /* hterm_all.js */; };
+		52C85CE32168F84E00A1A102 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1ED21457E5E004D76E3 /* index.html */; };
+		52C85CE42168F84E00A1A102 /* webfont.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EE21457E5E004D76E3 /* webfont.js */; };
+		52C85CE52168F84E00A1A102 /* wstty.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EF21457E5E004D76E3 /* wstty.js */; };
+		52C85CE62168FFEF00A1A102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E720663A08009EDD49 /* Assets.xcassets */; };
+		52C85CE8216900A700A1A102 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5EC20663A08009EDD49 /* Info.plist */; };
 		CD2AA5E620663A08009EDD49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA5E520663A08009EDD49 /* AppDelegate.swift */; };
 		CD2AA5E820663A08009EDD49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E720663A08009EDD49 /* Assets.xcassets */; };
 		CD2AA5EB20663A08009EDD49 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E920663A08009EDD49 /* MainMenu.xib */; };
@@ -33,12 +43,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520E3C132169047500483F55 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		520E3C152169049000483F55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		520E3C1D216914A100483F55 /* thumbnail@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2.png"; sourceTree = "<group>"; };
+		520E3C1E216914A100483F55 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		5267E1EA21457E5E004D76E3 /* dvsm.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dvsm.ttf; sourceTree = "<group>"; };
 		5267E1EB21457E5E004D76E3 /* fonts.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = fonts.css; sourceTree = "<group>"; };
 		5267E1EC21457E5E004D76E3 /* hterm_all.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hterm_all.js; sourceTree = "<group>"; };
 		5267E1ED21457E5E004D76E3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		5267E1EE21457E5E004D76E3 /* webfont.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = webfont.js; sourceTree = "<group>"; };
 		5267E1EF21457E5E004D76E3 /* wstty.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wstty.js; sourceTree = "<group>"; };
+		52C85CD72168F75000A1A102 /* gameControl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gameControl.js; sourceTree = "<group>"; };
 		CD2AA5E220663A08009EDD49 /* LazyNethackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyNethackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2AA5E520663A08009EDD49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD2AA5E720663A08009EDD49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,12 +79,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520E3C162169049000483F55 /* Cocoa.framework in Frameworks */,
+				520E3C142169047500483F55 /* ScreenSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520E3C122169047500483F55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				520E3C152169049000483F55 /* Cocoa.framework */,
+				520E3C132169047500483F55 /* ScreenSaver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD2AA5D920663A08009EDD49 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +103,7 @@
 				CD2AA613206797E9009EDD49 /* Resources */,
 				CD2AA60E2067978E009EDD49 /* Source */,
 				CD2AA5E320663A08009EDD49 /* Products */,
+				520E3C122169047500483F55 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -103,6 +130,9 @@
 		CD2AA60D20679771009EDD49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				520E3C1E216914A100483F55 /* thumbnail.png */,
+				520E3C1D216914A100483F55 /* thumbnail@2.png */,
+				52C85CD72168F75000A1A102 /* gameControl.js */,
 				5267E1EA21457E5E004D76E3 /* dvsm.ttf */,
 				5267E1EB21457E5E004D76E3 /* fonts.css */,
 				5267E1EC21457E5E004D76E3 /* hterm_all.js */,
@@ -214,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Tessi;
 				TargetAttributes = {
 					CD2AA5E120663A08009EDD49 = {
@@ -223,7 +253,7 @@
 					};
 					CD2AA5F720663A3D009EDD49 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -252,14 +282,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5267E1F321457E5E004D76E3 /* index.html in Resources */,
+				52C85CE02168F84E00A1A102 /* dvsm.ttf in Resources */,
+				52C85CE12168F84E00A1A102 /* fonts.css in Resources */,
+				52C85CE22168F84E00A1A102 /* hterm_all.js in Resources */,
+				52C85CE32168F84E00A1A102 /* index.html in Resources */,
+				52C85CE42168F84E00A1A102 /* webfont.js in Resources */,
+				52C85CE52168F84E00A1A102 /* wstty.js in Resources */,
+				52C85CD82168F75000A1A102 /* gameControl.js in Resources */,
+				520E3C1F216914A100483F55 /* thumbnail@2.png in Resources */,
+				520E3C21216914A100483F55 /* thumbnail.png in Resources */,
 				CD2AA5E820663A08009EDD49 /* Assets.xcassets in Resources */,
-				5267E1F421457E5E004D76E3 /* webfont.js in Resources */,
-				5267E1F121457E5E004D76E3 /* fonts.css in Resources */,
-				5267E1F521457E5E004D76E3 /* wstty.js in Resources */,
 				CD2AA5EB20663A08009EDD49 /* MainMenu.xib in Resources */,
-				5267E1F221457E5E004D76E3 /* hterm_all.js in Resources */,
-				5267E1F021457E5E004D76E3 /* dvsm.ttf in Resources */,
 				CD2AA61520679824009EDD49 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,12 +301,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5267E1F62145BBB2004D76E3 /* dvsm.ttf in Resources */,
-				5267E1F72145BBB2004D76E3 /* fonts.css in Resources */,
-				5267E1F82145BBB2004D76E3 /* hterm_all.js in Resources */,
-				5267E1F92145BBB2004D76E3 /* index.html in Resources */,
-				5267E1FA2145BBB2004D76E3 /* webfont.js in Resources */,
-				5267E1FB2145BBB2004D76E3 /* wstty.js in Resources */,
+				52C85CDA2168F84000A1A102 /* dvsm.ttf in Resources */,
+				52C85CDB2168F84000A1A102 /* fonts.css in Resources */,
+				52C85CDC2168F84000A1A102 /* hterm_all.js in Resources */,
+				52C85CDD2168F84000A1A102 /* index.html in Resources */,
+				52C85CDE2168F84000A1A102 /* webfont.js in Resources */,
+				52C85CDF2168F84000A1A102 /* wstty.js in Resources */,
+				52C85CD92168F75000A1A102 /* gameControl.js in Resources */,
+				520E3C20216914A100483F55 /* thumbnail@2.png in Resources */,
+				520E3C22216914A100483F55 /* thumbnail.png in Resources */,
+				52C85CE62168FFEF00A1A102 /* Assets.xcassets in Resources */,
+				52C85CE8216900A700A1A102 /* Info.plist in Resources */,
 				CD2AA6192067A33B009EDD49 /* PreferencesWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -492,7 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
