@@ -46,7 +46,7 @@ The screensaver consists of two parts:
 * **Alastair Tse** - His screen saver project [WebViewScreensaver](https://github.com/liquidx/webviewscreensaver) helped me a lot with getting a web view to run.
 * **Mattias Jahnke** - His screen saver project [WorldClock](https://github.com/mattiasjahnke/WordClock) was my go to source for a nice SWIFT setup for screensavers.
 * **alt.org/nethack** - A place where fellow nethack'ians play nethack online for the viewing pleasure of the world. They have their own [page]() where people can watch the game. This page heavily inspired me and my approach to base this screensaver on a WebView component.
-* **The Nethack developers** - [Nethack](https://www.nethack.org/) is a fin game and developed as open source. This allowed me, for example, to use the NEthack logo without inventing my own.
+* **The Nethack developers** - [Nethack](https://www.nethack.org/) is developed as open source. This allowed me to use the Nethack logo without inventing my own.
 
 ## License
 
