@@ -39,10 +39,12 @@ GameControl.charsetStrippingCheck = () => {
 GameControl.screen = () => GameControl.term.screen_
 
 // when charset stripping is set wrong, we see �'s on the screen
-GameControl.weirdCharactersPresent = () => GameControl.screen()
-                                                      .rowsArray
-                                                      .map((r) => r.textContent).join("\n")
-                                                      .search("�") > 0;
+GameControl.weirdCharactersPresent = () => {
+  const screenContent = GameControl.screen()
+                                   .rowsArray
+                                   .map((r) => r.textContent).join("\n")
+  return screenContent.search('lqqq') + screenContent.search("�") > 0;
+};
 
 // coming from a game, we want to watch another
 // randomly selected game.
@@ -91,6 +93,23 @@ GameControl.sendKeysToTerminal = (keys, time_between_key_presses) => {
 };
 
 GameControl.reloadPage = () => window.location.reload(false);
+GameControl.isPreview = () => !!(new URL(location)).searchParams.get('preview');
+
+GameControl.setTermSettings = () => {
+  // intentionally make the screen super wide so all games render without
+  // unwanted linebreaks.
+  if (GameControl.term.screenSize.width < 256) {
+    GameControl.term.setWidth(256);
+  }
+  if (GameControl.term.screenSize.height < 128) {
+    GameControl.term.setHeight(128);
+  }
+  if (GameControl.isPreview()) {
+    GameControl.term.setFontSize(4);
+  } else {
+    GameControl.term.setFontSize(15);
+  }
+}
 
 window.onload = () => {
   WSTTY.install({url: GameControl.settings.url, fonts: GameControl.settings.fonts})
@@ -100,6 +119,7 @@ window.onload = () => {
          GameControl.term = term;
          wstty.onConnectionError = GameControl.reloadPage;
          wstty.onMessageReceived = () => GameControl.lastGameUpdateReceivedAt = new Date();
+         GameControl.setTermSettings();
          return GameControl.autoconnect();
        })
        .then(() => {

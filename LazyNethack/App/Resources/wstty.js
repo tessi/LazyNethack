@@ -12,7 +12,6 @@ hterm.defaultStorage = new lib.Storage.Memory();
  ["font-smoothing", ""],
  ["foreground-color", "#aaaaaa"],
  ["scrollbar-visible", false],
- ["scrollbar-visible", false],
  // ["receive-encoding", "raw"],
  ["terminal-encoding", 'iso-2022'], // ['iso-2022', 'utf-8', 'utf-8-locked']
 ].forEach(function(v) {

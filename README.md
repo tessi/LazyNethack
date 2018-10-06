@@ -27,6 +27,10 @@ Ok, I'll be honest. This is my first MacOS/Swift app and I just built it for my 
 ### Gotchas
 
 * It needs internet to connect to alt.org (the place where nethack people play online). If things don't load, chances are you're firewall blocks requests.
+* If you want to install a new version of this screensaver, please follow these exact steps (to avoid a MacOS bug which caches the old binary):
+  * remove the old version of the screensaver
+  * close the settings app
+  * install the new version
 
 ## Development and Contribution
 
@@ -46,6 +50,7 @@ The screensaver consists of two parts:
 * **Alastair Tse** - His screen saver project [WebViewScreensaver](https://github.com/liquidx/webviewscreensaver) helped me a lot with getting a web view to run.
 * **Mattias Jahnke** - His screen saver project [WorldClock](https://github.com/mattiasjahnke/WordClock) was my go to source for a nice SWIFT setup for screensavers.
 * **alt.org/nethack** - A place where fellow nethack'ians play nethack online for the viewing pleasure of the world. They have their own [page]() where people can watch the game. This page heavily inspired me and my approach to base this screensaver on a WebView component.
+* **The Nethack developers** - [Nethack](https://www.nethack.org/) is a fin game and developed as open source. This allowed me, for example, to use the NEthack logo without inventing my own.
 
 ## License
 
