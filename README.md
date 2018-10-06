@@ -8,8 +8,6 @@
 
 ### Option 1: Download
 
-Ok, I'll be honest. This is my first MacOS/Swift app and I just built it for my personal nethack viewing pleasure. So things might be broken. However, I also compiled things and bundled them as a release.
-
 1. Download from https://github.com/tessi/LazyNethack/releases
 1. Unpack the LazyNethack-x.x.zip file.
 1. Double-click (Open) the LazyNethack.saver file and choose to install it.
@@ -34,16 +32,14 @@ Ok, I'll be honest. This is my first MacOS/Swift app and I just built it for my 
 
 ## Development and Contribution
 
-Feel free to contribute by adding issues or opening pull requests.
-
-Apart from fixing the known and unknown problems - I'm sure you can teach me a thing or two since this is a first in many ways (my first screensaver, my first swift app, my first thing built with XCode). I'm happy for any issues or pull requests in that regard.
+Feel free to contribute by adding issues or opening pull requests. 🌷
 
 ### Architecture
 
 The screensaver consists of two parts:
 
-* A Swift part which hooks into the MacOS screensaver app and opens a WebView . Find the source in `Source`.
-* and a webpage which is opened in that WebView. Find it in `App/Ressources/index.html`. It creates a terminal (`hterm`) and opens a websocket connection to a nethack server. `gameControl.js` is responsible to orchestrate that and contains the logic how to join nethack games and when to switch to new games.
+* A Swift part which hooks into the MacOS screensaver app and opens a WebView . Find the source in `Source` or open the project in XCode.
+* and a web page which is opened in that WebView. Find it in `App/Ressources/index.html`. It creates a terminal (`hterm`) and opens a websocket connection to a nethack server. `gameControl.js` is responsible to orchestrate that and contains the logic how to join nethack games and when to switch to new games.
 
 ## Thanks
 
@@ -54,4 +50,4 @@ The screensaver consists of two parts:
 
 ## License
 
-[MIT](https://github.com/mattiasjahnke/WordClock/blob/master/LICENSE)
+[MIT licensed, the nethack logo is under the NETHACK GENERAL PUBLIC LICENSE](https://github.com/tessi/LazyNethack/blob/master/LICENSE)
