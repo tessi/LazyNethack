@@ -1,8 +1,7 @@
 const GameControl = {
   settings: {
     gameStaleAfterSeconds: 300,
-    menuStartOfGameEntryRegex: / [a-z]\) /i,
-    menuGameEntryRegex: /\s([a-zA-Z])\)\s+(\S+)\s+(\S+)\s+(\d+x \d+)\s+(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s+((\d+h )?(\d+m )?(\d+s )?)\s*(\d+)/,
+    menuGameEntryRegex: /\s(?<letter>[a-zA-Z])\)\s+(?<user>\S+)\s+(\S+)\s+(?<size>\d+x \d+)\s+(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s+((\d+h )?(\d+m )?(\d+s )?)\s*(\d+)/,
     fonts: {
              families: ["DejaVu Sans Mono"],
              urls: ["fonts.css"]
@@ -55,7 +54,16 @@ GameControl.loadAnotherGame = () => {
 
 GameControl.selectGame = () => {
   // assumes we are in the game menu sorted by "idle time"
-  // selects the first game in the list
+  // selects the first game in the list (game entry "a)")
+  // before selecting it, save it's screen size
+  const dimensions = GameControl.screen()
+                                .rowsArray
+                                .map((r) => r.textContent.match(GameControl.settings.menuGameEntryRegex)).filter(r => r)[0]
+                                .groups
+                                .size
+  let [width, height] = dimensions.split('x ');
+  GameControl.term.setWidth(parseInt(width));
+  GameControl.term.setHeight(parseInt(height));
   return GameControl.sendKeysToTerminal(['a'], GameControl.settings.defaultTimeout)
                     .then(() => {
                      // for some reason safari scrolls down after load. We want to be scrolled-up instead.
@@ -101,8 +109,8 @@ GameControl.setTermSettings = () => {
   if (GameControl.term.screenSize.width < 256) {
     GameControl.term.setWidth(256);
   }
-  if (GameControl.term.screenSize.height < 128) {
-    GameControl.term.setHeight(128);
+  if (GameControl.term.screenSize.height < 64) {
+    GameControl.term.setHeight(64);
   }
 }
 

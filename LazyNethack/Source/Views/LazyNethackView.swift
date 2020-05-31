@@ -67,10 +67,7 @@ class LazyNethackView: ScreenSaverView,
     let bundle = Bundle.init(for: type(of: self))
     let baseUrl = bundle.path(forResource: "index", ofType: "html")
     if let webView = webView, let baseUrl = baseUrl {
-      let htmlUrl = URL(fileURLWithPath: baseUrl, isDirectory: false)
-      var urlComps = URLComponents(string: htmlUrl.absoluteString)!
-      if isPreview { urlComps.queryItems = [URLQueryItem(name: "preview", value: "true")] }
-      let url = urlComps.url!
+      let url = URL(fileURLWithPath: baseUrl, isDirectory: false)
       NSLog("nethack url: %@", url.absoluteString)
       webView.loadFileURL(url, allowingReadAccessTo: url)
     }
