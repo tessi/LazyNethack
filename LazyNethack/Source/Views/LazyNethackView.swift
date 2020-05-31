@@ -3,7 +3,7 @@
 //  LazyNethack
 //
 //  Created by Philipp Tessenow on 2018-09-08.
-//  Copyright © 2018 Tessi. All rights reserved.
+//  Copyright © 2018-2020 Philipp Tessenow. All rights reserved.
 //
 
 import Foundation
@@ -12,12 +12,10 @@ import WebKit
 
 @objc(LazyNethackView)
 class LazyNethackView: ScreenSaverView,
-                       WebEditingDelegate,
-                       WebFrameLoadDelegate,
-                       WebPolicyDelegate,
-                       WebUIDelegate {
+                       WKUIDelegate,
+                       WKNavigationDelegate {
   
-  var webView: WebView?
+  var webView: WKWebView?
   var preferencesController: PreferencesWindowController?
   var startedFromTestApp = false
     
@@ -31,14 +29,14 @@ class LazyNethackView: ScreenSaverView,
       return controller.window
     }
   
-//    let controller = PreferencesWindowController(windowNibName: NSNib.Name(rawValue: "PreferencesWindow"))
-    let controller = PreferencesWindowController(windowNibName: NSNib.Name("PreferencesWindow"))
+    // let controller = PreferencesWindowController(windowNibName: NSNib.Name(rawValue: "PreferencesWindow"))
+    let controller = PreferencesWindowController(windowNibName: "PreferencesWindow")
   
     preferencesController = controller
     return controller.window
   }
 
-  // entry point for when we are started within apples screensaber framework
+  // entry point for when we are started within apples screensaver framework
   override init?(frame: NSRect, isPreview: Bool) {
     super.init(frame: frame, isPreview: isPreview)
     setup()
@@ -52,12 +50,10 @@ class LazyNethackView: ScreenSaverView,
   }
   
   deinit {
-    if let webView = webView {
-      webView.frameLoadDelegate = nil
-      webView.policyDelegate = nil
+   if let webView = webView {
       webView.uiDelegate = nil
-      webView.editingDelegate = nil
-      webView.close()
+      webView.navigationDelegate = nil
+      webView.stopLoading();
     }
   }
     
@@ -71,24 +67,24 @@ class LazyNethackView: ScreenSaverView,
     let bundle = Bundle.init(for: type(of: self))
     let baseUrl = bundle.path(forResource: "index", ofType: "html")
     if let webView = webView, let baseUrl = baseUrl {
-      var url = "file://" + baseUrl
-      if isPreview { url = url + "?preview=true" }
-      NSLog("nethack url: %@", url)
-      webView.mainFrameURL = url
+      let htmlUrl = URL(fileURLWithPath: baseUrl, isDirectory: false)
+      var urlComps = URLComponents(string: htmlUrl.absoluteString)!
+      if isPreview { urlComps.queryItems = [URLQueryItem(name: "preview", value: "true")] }
+      let url = urlComps.url!
+      NSLog("nethack url: %@", url.absoluteString)
+      webView.loadFileURL(url, allowingReadAccessTo: url)
     }
   }
   
   fileprivate func createWebView() {
-    webView = WebView(frame: self.bounds)
+    let webConfiguration = WKWebViewConfiguration()
+    webConfiguration.applicationNameForUserAgent = "https://github.com/tessi/LazyNethack/issues"
+    webView = WKWebView.init(frame: self.bounds, configuration: webConfiguration)
     if let webView = webView {
-      webView.frameLoadDelegate = self
-      webView.shouldUpdateWhileOffscreen = true
-      webView.policyDelegate = self
       webView.uiDelegate = self
-      webView.editingDelegate = self
+      webView.navigationDelegate = self
       webView.autoresizingMask = [NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]
       webView.autoresizesSubviews = true
-      webView.drawsBackground = false
     }
   }
   
@@ -111,7 +107,7 @@ class LazyNethackView: ScreenSaverView,
     super.stopAnimation()
     if let webView = webView {
       webView.removeFromSuperview()
-      webView.close()
+      webView.stopLoading()
     }
     webView = nil
   }
@@ -137,53 +133,5 @@ class LazyNethackView: ScreenSaverView,
 
   override func resignFirstResponder() -> Bool {
     return false;
-  }
-  
-  // MARK: - WebPolicyDelegate
-
-  func webView(_ webView: WebView!, decidePolicyForNewWindowAction actionInformation: [AnyHashable : Any]!, request: URLRequest!, newFrameName frameName: String!, decisionListener listener: WebPolicyDecisionListener!) {
-    // Don't open new windows.
-    listener.ignore()
-  }
-
-  func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
-    if let webView = webView {
-      webView.resignFirstResponder()
-      webView.mainFrame.frameView.allowsScrolling = false
-      //  webView.drawsBackground = true
-    }
-  }
-
-  func webView(_ webView: WebView!, unableToImplementPolicyWithError error: Error!, frame: WebFrame!) {
-    NSLog("unableToImplement: %@", error.localizedDescription)
-  }
-  
-  // MARK: - WebUIDelegate
-  func webViewFirstResponder(_ sender: WebView!) -> NSResponder! {
-    return self;
-  }
-
-  func webViewClose(_ sender: WebView!) {
-    return;
-  }
-
-  func webViewIsResizable(_ sender: WebView!) -> Bool {
-    return false;
-  }
-  
-  func webViewIsStatusBarVisible(_ sender: WebView!) -> Bool {
-    return false;
-  }
-  
-  func webViewRunModal(_ sender: WebView!) {
-    return;
-  }
-
-  func webViewShow(_ sender: WebView!) {
-    return;
-  }
-
-  func webViewUnfocus(_ sender: WebView!) {
-    return;
   }
 }

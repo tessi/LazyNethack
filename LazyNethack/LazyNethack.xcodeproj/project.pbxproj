@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		520E3C142169047500483F55 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E3C132169047500483F55 /* ScreenSaver.framework */; };
 		520E3C162169049000483F55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E3C152169049000483F55 /* Cocoa.framework */; };
 		520E3C1F216914A100483F55 /* thumbnail@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 520E3C1D216914A100483F55 /* thumbnail@2.png */; };
 		520E3C20216914A100483F55 /* thumbnail@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 520E3C1D216914A100483F55 /* thumbnail@2.png */; };
@@ -29,6 +28,7 @@
 		52C85CE52168F84E00A1A102 /* wstty.js in Resources */ = {isa = PBXBuildFile; fileRef = 5267E1EF21457E5E004D76E3 /* wstty.js */; };
 		52C85CE62168FFEF00A1A102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E720663A08009EDD49 /* Assets.xcassets */; };
 		52C85CE8216900A700A1A102 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5EC20663A08009EDD49 /* Info.plist */; };
+		52DAF474248076930098E69B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E3C132169047500483F55 /* ScreenSaver.framework */; };
 		CD2AA5E620663A08009EDD49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA5E520663A08009EDD49 /* AppDelegate.swift */; };
 		CD2AA5E820663A08009EDD49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E720663A08009EDD49 /* Assets.xcassets */; };
 		CD2AA5EB20663A08009EDD49 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E920663A08009EDD49 /* MainMenu.xib */; };
@@ -79,8 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DAF474248076930098E69B /* ScreenSaver.framework in Frameworks */,
 				520E3C162169049000483F55 /* Cocoa.framework in Frameworks */,
-				520E3C142169047500483F55 /* ScreenSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,23 +243,25 @@
 		CD2AA5DA20663A08009EDD49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Tessi;
 				TargetAttributes = {
 					CD2AA5E120663A08009EDD49 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 					};
 					CD2AA5F720663A3D009EDD49 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = CD2AA5DD20663A08009EDD49 /* Build configuration list for PBXProject "LazyNethack" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -404,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -457,10 +459,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -471,13 +474,17 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				DEVELOPMENT_TEAM = YGF9QRRL6Y;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -488,31 +495,38 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				DEVELOPMENT_TEAM = YGF9QRRL6Y;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = App/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		CD2AA60020663A3D009EDD49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				DEVELOPMENT_TEAM = YGF9QRRL6Y;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -520,17 +534,20 @@
 		CD2AA60120663A3D009EDD49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8GS26QSD4W;
+				DEVELOPMENT_TEAM = YGF9QRRL6Y;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tessenow.LazyNethack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;

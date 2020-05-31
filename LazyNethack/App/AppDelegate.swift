@@ -3,7 +3,7 @@
 //  LazyNethack
 //
 //  Created by Philipp Tessenow on 2018-09-08.
-//  Copyright © 2018 Tessi. All rights reserved.
+//  Copyright © 2018-2020 Copyright © 2018-2020. All rights reserved.
 //
 
 import Cocoa

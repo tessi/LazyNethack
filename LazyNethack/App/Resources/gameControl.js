@@ -93,9 +93,9 @@ GameControl.sendKeysToTerminal = (keys, time_between_key_presses) => {
 };
 
 GameControl.reloadPage = () => window.location.reload(false);
-GameControl.isPreview = () => !!(new URL(location)).searchParams.get('preview');
 
 GameControl.setTermSettings = () => {
+  GameControl.term.setFontSize(15);
   // intentionally make the screen super wide so all games render without
   // unwanted linebreaks.
   if (GameControl.term.screenSize.width < 256) {
@@ -103,11 +103,6 @@ GameControl.setTermSettings = () => {
   }
   if (GameControl.term.screenSize.height < 128) {
     GameControl.term.setHeight(128);
-  }
-  if (GameControl.isPreview()) {
-    GameControl.term.setFontSize(4);
-  } else {
-    GameControl.term.setFontSize(15);
   }
 }
 
