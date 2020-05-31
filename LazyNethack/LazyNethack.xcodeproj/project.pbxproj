@@ -29,6 +29,9 @@
 		52C85CE62168FFEF00A1A102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E720663A08009EDD49 /* Assets.xcassets */; };
 		52C85CE8216900A700A1A102 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5EC20663A08009EDD49 /* Info.plist */; };
 		52DAF474248076930098E69B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E3C132169047500483F55 /* ScreenSaver.framework */; };
+		52EBCF07248468FC002F95F9 /* EventSinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBCF06248468FC002F95F9 /* EventSinkView.swift */; };
+		52EBCF08248468FC002F95F9 /* EventSinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBCF06248468FC002F95F9 /* EventSinkView.swift */; };
+		52EBCF0A248469B9002F95F9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EBCF09248469B9002F95F9 /* AppKit.framework */; };
 		CD2AA5E620663A08009EDD49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2AA5E520663A08009EDD49 /* AppDelegate.swift */; };
 		CD2AA5E820663A08009EDD49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E720663A08009EDD49 /* Assets.xcassets */; };
 		CD2AA5EB20663A08009EDD49 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2AA5E920663A08009EDD49 /* MainMenu.xib */; };
@@ -54,6 +57,8 @@
 		5267E1EE21457E5E004D76E3 /* webfont.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = webfont.js; sourceTree = "<group>"; };
 		5267E1EF21457E5E004D76E3 /* wstty.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wstty.js; sourceTree = "<group>"; };
 		52C85CD72168F75000A1A102 /* gameControl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gameControl.js; sourceTree = "<group>"; };
+		52EBCF06248468FC002F95F9 /* EventSinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSinkView.swift; sourceTree = "<group>"; };
+		52EBCF09248469B9002F95F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CD2AA5E220663A08009EDD49 /* LazyNethackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyNethackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2AA5E520663A08009EDD49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD2AA5E720663A08009EDD49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EBCF0A248469B9002F95F9 /* AppKit.framework in Frameworks */,
 				52DAF474248076930098E69B /* ScreenSaver.framework in Frameworks */,
 				520E3C162169049000483F55 /* Cocoa.framework in Frameworks */,
 			);
@@ -90,6 +96,7 @@
 		520E3C122169047500483F55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52EBCF09248469B9002F95F9 /* AppKit.framework */,
 				520E3C152169049000483F55 /* Cocoa.framework */,
 				520E3C132169047500483F55 /* ScreenSaver.framework */,
 			);
@@ -161,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				CD2AA6222067B616009EDD49 /* LazyNethackView.swift */,
+				52EBCF06248468FC002F95F9 /* EventSinkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD2AA6232067B616009EDD49 /* LazyNethackView.swift in Sources */,
+				52EBCF07248468FC002F95F9 /* EventSinkView.swift in Sources */,
 				CD2AA5E620663A08009EDD49 /* AppDelegate.swift in Sources */,
 				CD2AA6202067A749009EDD49 /* Preferences.swift in Sources */,
 				CD2AA61D2067A391009EDD49 /* PreferencesWindowController.swift in Sources */,
@@ -336,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EBCF08248468FC002F95F9 /* EventSinkView.swift in Sources */,
 				CD2AA6212067A749009EDD49 /* Preferences.swift in Sources */,
 				CD2AA61E2067A391009EDD49 /* PreferencesWindowController.swift in Sources */,
 				CD2AA6242067B616009EDD49 /* LazyNethackView.swift in Sources */,

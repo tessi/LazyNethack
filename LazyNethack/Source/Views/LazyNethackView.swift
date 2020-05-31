@@ -60,6 +60,9 @@ class LazyNethackView: ScreenSaverView,
   func setup() {
     autoresizingMask = [NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]
     autoresizesSubviews = true
+    nextResponder = nil
+    NSEvent.addLocalMonitorForEvents(matching: .keyDown) { _ in return nil; }
+    NSEvent.addLocalMonitorForEvents(matching: .keyUp) { _ in return nil; }
     if startedFromTestApp { startAnimation() }
   }
   
@@ -91,6 +94,7 @@ class LazyNethackView: ScreenSaverView,
     createWebView()
     if let webView = webView {
       addSubview(webView)
+      addSubview(EventSinkView.init())
       
       let color = NSColor(calibratedWhite: 0.0, alpha: 1.0)
       if let layer = webView.layer {
